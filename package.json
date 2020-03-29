@@ -1,0 +1,151 @@
+{
+    "name": "bridlensis",
+    "displayName": "BridleNSIS",
+    "description": "Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS)",
+    "version": "0.0.0",
+    "publisher": "idleberg",
+    "license": "MIT OR GPL-2.0",
+    "author": {
+        "name": "Jan T. Sott",
+        "url": "http://github.com/idleberg"
+    },
+    "scripts": {
+        "build": "webpack --mode production",
+        "dev": "webpack --mode none --watch",
+        "lint": "vscode-linter",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run lint",
+        "vscode:prepublish": "webpack --mode production && gulp"
+    },
+    "keywords": [
+        "nsis",
+        "bridlensis"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/idleberg/vscode-bridlensis"
+    },
+    "homepage": "https://github.com/idleberg/vscode-bridlensis#readme",
+    "bugs": {
+        "url": "https://github.com/idleberg/vscode-bridlensis/issues"
+    },
+    "main": "./lib/extension",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^13.9.3",
+        "gulp": "^4.0.2",
+        "gulp-raster": "^0.2.0",
+        "gulp-rename": "^2.0.0",
+        "husky": "^4.2.3",
+        "ts-loader": "^6.2.2",
+        "tslint": "^6.1.0",
+        "vscode": "^1.1.36",
+        "vscode-linter": "^0.3.1",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run test"
+        }
+    },
+    "extensionDependencies": [
+        "idleberg.nsis"
+    ],
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:bridlensis"
+    ],
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "BridleNSIS",
+            "properties": {
+                "bridlensis.pathToJar": {
+                    "type": "string",
+                    "default": "",
+                    "markdownDescription": "%bridleNsisPathToJar%"
+                },
+                "bridlensis.customArguments": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [],
+                    "markdownDescription": "%bridleNsisDefaultArgs%"
+                },
+                "bridlensis.nsisHome": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Specify the NSIS home directory (tried to detect automatically if not specified)"
+                }
+            }
+        },
+        "languages": [
+            {
+                "id": "bridlensis",
+                "aliases": [
+                    "BridleNSIS"
+                ],
+                "extensions": [
+                    ".bridle-nsi",
+                    ".bridle-nsis",
+                    ".bridle-nsh"
+                ],
+                "configuration": "./config/bridlensis.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "bridlensis",
+                "scopeName": "source.nsis.bridle",
+                "path": "./syntaxes/bridlensis.tmLanguage"
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.bridlensis.transpile",
+                "title": "NSIS: Transpile BridleNSIS code",
+                "icon": {
+                    "dark": "./images/icon--build-dark.svg",
+                    "light": "./images/icon--build-light.svg"
+                }
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "ctrl+shift+b",
+                "mac": "cmd+alt+b",
+                "when": "editorFocus && editorLangId == bridlensis",
+                "command": "extension.bridlensis.transpile"
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "when": "resourceLangId == bridlensis",
+                    "command": "extension.bridlensis.transpile",
+                    "group": "navigation@1"
+                }
+            ]
+        },
+        "snippets": [
+            {
+                "language": "bridlensis",
+                "path": "./snippets/core.BridleNSIS.json"
+            }
+        ]
+    },
+    "babel": {
+        "presets": [
+            "es2015"
+        ]
+    }
+}

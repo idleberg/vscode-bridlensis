@@ -1,0 +1,4 @@
+{
+  "bridleNsisDefaultArgs": "Specify the default arguments for [BridleNSIS](https://github.com/henrikor2/bridlensis)",
+  "bridleNsisPathToJar": "Specify the full path to `BridleNSIS.jar`"
+}
