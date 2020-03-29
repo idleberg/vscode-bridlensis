@@ -1,38 +1,17 @@
 version: 2.1
-
-commands:
-  run-tests:
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Installing Dependencies
-          command: npm install
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
-      - run:
-          name: Lint Source
-          command: npm run test
-
-jobs:
-  node-latest:
-    docker:
-      - image: circleci/node:latest
-    steps:
-      - run-tests
-
-  node-lts:
-    docker:
-      - image: circleci/node:lts
-    steps:
-      - run-tests
-
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm test
 workflows:
-  node-multi-build:
-    jobs:
-    - node-latest
-    - node-lts
-  version: 2
+    build-and-test:
+      jobs:
+        - build-and-test
