@@ -3,7 +3,7 @@
 [![The MIT License](https://flat.badgen.net/badge/license/MIT/orange)](http://opensource.org/licenses/MIT)
 [![GNU General Public License](https://flat.badgen.net/badge/license/GPL%20v2/orange)](http://www.gnu.org/licenses/gpl-2.0.html)
 [![GitHub](https://flat.badgen.net/github/release/idleberg/vscode-bridlensis)](https://github.com/idleberg/vscode-bridlensis/releases)
-[![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/installs-short/idleberg.nsis.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis)
+[![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/installs-short/idleberg.bridlensis.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/vscode-bridlensis)](https://circleci.com/gh/idleberg/vscode-bridlensis)
 [![David](https://flat.badgen.net/david/dep/idleberg/vscode-bridlensis)](https://david-dm.org/idleberg/vscode-bridlensis)
 [![Gitter](https://flat.badgen.net/badge/chat/on%20gitter/ff69b4)](https://gitter.im/NSIS-Dev/vscode)
