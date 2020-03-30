@@ -15,7 +15,7 @@
         "lint": "vscode-linter",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "npm run lint",
-        "vscode:prepublish": "webpack --mode production && gulp"
+        "vscode:prepublish": "webpack --mode production"
     },
     "keywords": [
         "nsis",
@@ -33,9 +33,6 @@
     "dependencies": {},
     "devDependencies": {
         "@types/node": "^13.9.3",
-        "gulp": "^4.0.2",
-        "gulp-raster": "^0.2.0",
-        "gulp-rename": "^2.0.0",
         "husky": "^4.2.3",
         "ts-loader": "^6.2.2",
         "tslint": "^6.1.0",
