@@ -1,4 +1,4 @@
-# NSIS for Visual Studio Code
+# BridleNSIS for Visual Studio Code
 
 [![The MIT License](https://flat.badgen.net/badge/license/MIT/orange)](http://opensource.org/licenses/MIT)
 [![GNU General Public License](https://flat.badgen.net/badge/license/GPL%20v2/orange)](http://www.gnu.org/licenses/gpl-2.0.html)
@@ -9,6 +9,8 @@
 [![Gitter](https://flat.badgen.net/badge/chat/on%20gitter/ff69b4)](https://gitter.im/NSIS-Dev/vscode)
 
 Language syntax, IntelliSense and build system for BridleNSIS.
+
+⚠️ This package was once part of [`vscode-nsis`](https://github.com/idleberg/vscode-nsis), but has been separated due to its planned deprecation
 
 ## Installation
 
@@ -43,10 +45,6 @@ Clone repository as `bridlensis`:
 ```bash
 $ git clone https://github.com/idleberg/vscode-bridlensis bridlensis
 ```
-
-## Related
-
-- [vscode-nsis](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis) - NSIS package for Visual Studio Code
 
 ## License
 
