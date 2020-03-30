@@ -46,7 +46,7 @@ $ git clone https://github.com/idleberg/vscode-bridlensis bridlensis
 
 ## Related
 
-- [vscode-bridlensis](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis) - NSIS package for Visual Studio Code
+- [vscode-nsis](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis) - NSIS package for Visual Studio Code
 
 ## License
 
