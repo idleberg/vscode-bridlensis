@@ -8,9 +8,9 @@
 [![David](https://flat.badgen.net/david/dep/idleberg/vscode-bridlensis)](https://david-dm.org/idleberg/vscode-bridlensis)
 [![Gitter](https://flat.badgen.net/badge/chat/on%20gitter/ff69b4)](https://gitter.im/NSIS-Dev/vscode)
 
-Language syntax, IntelliSense and build system for BridleNSIS.
+Language syntax, IntelliSense and build system for [BridleNSIS](https://github.com/henrikor2/bridlensis).
 
-⚠️ This package was once part of [`vscode-nsis`](https://github.com/idleberg/vscode-nsis), but has been separated due to its planned deprecation
+⚠️ *This package was once part of [`vscode-nsis`](https://github.com/idleberg/vscode-nsis), but has been separated due to its planned deprecation*
 
 ## Installation
 
