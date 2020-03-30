@@ -25,20 +25,6 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@nsis/language-data@^0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@nsis/language-data/-/language-data-0.7.2.tgz#e1b260c96860a627b95c52442307411e7d5cc71d"
-  integrity sha512-AJNxliTuNlg/Wc568dO0KY8Gm56DO5wX8Yu3GcQbuMo9ttXqW8isX8JGnwPw2KR6ptTXcDZp+kadBv9VkzjYuA==
-
-"@nsis/logo@*":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@nsis/logo/-/logo-0.0.0.tgz#4c02b9c87a7088623ba3ff611685c2ac441b48d2"
-
-"@nsis/nlf@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@nsis/nlf/-/nlf-0.6.1.tgz#ff830948972c83f4ba1e5aaa5457d9baf5580807"
-  integrity sha512-NmaLVaIKKbuDFUPZgky+kkN0JcfgdGKYVOJ9HHKVD3X8rZBZcJZRHUAsqDtzPxamDlNHYub25aLpVcEHDMrUZA==
-
 "@prantlf/gulp-jsonlint@^2.3.2":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@prantlf/gulp-jsonlint/-/gulp-jsonlint-2.4.0.tgz#282d468c9b067f98202809274619e4b5d22fe30e"
@@ -78,11 +64,6 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
-
-"@types/vscode@^1.43.0":
-  version "1.43.0"
-  resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.43.0.tgz#22276e60034c693b33117f1068ffaac0e89522db"
-  integrity sha512-kIaR9qzd80rJOxePKpCB/mdy00mz8Apt2QA5Y6rdrKFn13QNFNeP3Hzmsf37Bwh/3cS7QjtAeGSK7wSqAU0sYQ==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -2453,11 +2434,6 @@ is-descriptor@^1.0.0, is-descriptor@^1.0.2:
     is-data-descriptor "^1.0.0"
     kind-of "^6.0.2"
 
-is-docker@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-2.0.0.tgz#2cb0df0e75e2d064fe1864c37cdeacb7b2dcf25b"
-  integrity sha512-pJEdRugimx4fBMra5z2/5iRdZ63OhYV0vr0Dwm5+xtW4D1FvRkB8hamMIhnWfyJeDdyr/aa7BDyNbtG38VxgoQ==
-
 is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
@@ -2578,11 +2554,6 @@ is-windows@^1.0.1, is-windows@^1.0.2:
 is-wsl@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
-
-is-wsl@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-2.1.1.tgz#4a1c152d429df3d441669498e2486d3596ebaf1d"
-  integrity sha512-umZHcSrwlDHo2TGMXv0DZ8dIUGunZ2Iv68YZnrmCiBPkZ4aaOhtv7pXJKeki9k3qJ3RJr0cDyitcl5wEH3AYog==
 
 isarray@0.0.1:
   version "0.0.1"
@@ -2929,13 +2900,6 @@ make-iterator@^1.0.0:
   resolved "https://registry.yarnpkg.com/make-iterator/-/make-iterator-1.0.1.tgz#29b33f312aa8f547c4a5e490f56afcec99133ad6"
   dependencies:
     kind-of "^6.0.2"
-
-makensis@^0.20.3:
-  version "0.20.3"
-  resolved "https://registry.yarnpkg.com/makensis/-/makensis-0.20.3.tgz#ef94b00d8748f9337f2361cd326d8d4b2bbcb6fb"
-  integrity sha512-SUxlKgorrDXfoBlfkIj1IeihvNfEEJR7oBA1RdSo7LYJKXVJHLqS++TEMaq/XKmWbYW6NowJ+jzH+o0eJanRHQ==
-  dependencies:
-    "@nsis/language-data" "^0.7.2"
 
 map-age-cleaner@^0.1.1:
   version "0.1.3"
@@ -3466,14 +3430,6 @@ once@^1.3.0, once@^1.3.1, once@^1.3.2, once@^1.4.0:
   resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
   dependencies:
     wrappy "1"
-
-open@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/open/-/open-7.0.3.tgz#db551a1af9c7ab4c7af664139930826138531c48"
-  integrity sha512-sP2ru2v0P290WFfv49Ap8MF6PkzGNnGlAwHweB4WR4mr5d2d0woiCluUeJ218w7/+PmoBy9JmYgD5A4mLcWOFA==
-  dependencies:
-    is-docker "^2.0.0"
-    is-wsl "^2.1.1"
 
 opencollective-postinstall@^2.0.2:
   version "2.0.2"

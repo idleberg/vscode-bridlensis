@@ -1,7 +1,7 @@
 {
     "name": "bridlensis",
     "displayName": "BridleNSIS",
-    "description": "Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS)",
+    "description": "Language syntax, IntelliSense and build system for BridleNSIS",
     "version": "0.0.0",
     "publisher": "idleberg",
     "license": "MIT OR GPL-2.0",
