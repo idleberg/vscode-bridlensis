@@ -1,4 +1,4 @@
-⚠️ **This package was once part of [vscode-nsis](https://github.com/idleberg/vscode-nsis), but has been separated due to its planned deprecation**
+⚠️ **This package was once part of [vscode-nsis](https://github.com/idleberg/vscode-nsis), but has been outsourced in preparation of its planned deprecation. Be aware that this package is no longer under development!**
 
 # BridleNSIS for Visual Studio Code
 
