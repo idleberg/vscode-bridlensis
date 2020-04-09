@@ -52,6 +52,10 @@
         }
     },
     "icon": "images/logo.png",
+    "galleryBanner": {
+      "color": "#232323",
+      "theme": "dark"
+    },
     "engines": {
         "vscode": "^1.0.0"
     },
