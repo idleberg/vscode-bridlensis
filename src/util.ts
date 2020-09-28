@@ -7,11 +7,7 @@ import {
   WorkspaceConfiguration
 } from 'vscode';
 
-import * as open from 'open';
 import { basename, dirname, extname, join } from 'path';
-import { access } from 'fs';
-import { platform } from 'os';
-import { exec, spawn } from 'child_process';
 
 function clearOutput(channel): void {
   const config: WorkspaceConfiguration = getConfig();
@@ -24,10 +20,6 @@ function clearOutput(channel): void {
 
 function getConfig(): WorkspaceConfiguration {
   return workspace.getConfiguration('bridlensis');
-}
-
-function openURL(cmd: string): void {
-  open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html?utm_source=vscode&utm_content=reference`);
 }
 
 function onSuccess(choice): void {
@@ -75,7 +67,6 @@ function validateConfig(setting: string): void {
 export {
   clearOutput,
   getConfig,
-  openURL,
   onSuccess,
   validateConfig
 };
