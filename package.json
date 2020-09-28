@@ -116,7 +116,7 @@
         "commands": [
             {
                 "command": "extension.bridlensis.transpile",
-                "title": "NSIS: Transpile BridleNSIS code",
+                "title": "BridleNSIS: Transpile code",
                 "icon": {
                     "dark": "./images/icon--build-dark.svg",
                     "light": "./images/icon--build-light.svg"
