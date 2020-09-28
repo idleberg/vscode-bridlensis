@@ -30,6 +30,9 @@
         "url": "https://github.com/idleberg/vscode-bridlensis/issues"
     },
     "main": "./lib/extension",
+    "extensionDependencies": [
+      "idleberg.nsis"
+    ],
     "dependencies": {},
     "devDependencies": {
         "@types/node": "^14.11.2",
