@@ -1,6 +1,7 @@
 # v1.2.0 [#](https://github.com/idleberg/vscode-bridlensis/releases/tag/1.2.0)
 
 - add support for variable substition when reading config
+- update dependencies
 
 # v1.1.1 [#](https://github.com/idleberg/vscode-bridlensis/releases/tag/1.1.1)
 
