@@ -18,7 +18,7 @@ async function transpile(): Promise<void> {
     return;
   }
 
-  const { customArguments, nsisHome, pathToJar, showNotifications } = await getConfig();
+  const { customArguments, nsisHome, pathToJar, showNotifications } = await getConfig('bridlensis');
   const document = window.activeTextEditor.document;
 
   if (customArguments.length) {
