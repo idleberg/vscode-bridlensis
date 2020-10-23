@@ -1,8 +1,7 @@
-'use strict';
-
 import { window, WorkspaceConfiguration } from 'vscode';
 
-import { clearOutput, getConfig, onSuccess, validateConfig } from './util';
+import { clearOutput, onSuccess, validateConfig } from './util';
+import { getConfig } from 'vscode-get-config';
 import { spawn } from 'child_process';
 
 const bridleChannel = window.createOutputChannel('BridleNSIS');
@@ -11,35 +10,33 @@ const bridleChannel = window.createOutputChannel('BridleNSIS');
  *  Requires BridleNSIS
  *  https://github.com/henrikor2/bridlensis
  */
-export const transpile = (): void => {
-  clearOutput(bridleChannel);
+async function transpile(): Promise<void> {
+  await clearOutput(bridleChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'bridlensis') {
     bridleChannel.appendLine('This command is only available for BridleNSIS files');
     return;
   }
 
-  const config: WorkspaceConfiguration = getConfig();
+  const { customArguments, nsisHome, pathToJar, showNotifications } = await getConfig();
   const document = window.activeTextEditor.document;
 
-  if (config.customArguments.length) {
-    validateConfig(config.customArguments);
+  if (customArguments.length) {
+    validateConfig(customArguments);
   }
 
   document.save().then( () => {
-    const bridleJar = config.pathToJar;
+    const bridleJar = pathToJar;
 
     if (typeof bridleJar === 'undefined' || bridleJar === null) {
       return window.showErrorMessage('No valid `BridleNSIS.jar` was specified in your config');
     }
 
     const defaultArguments: Array<string> = ['-jar', bridleJar];
-    const customArguments = config.customArguments;
 
-
-    if (config.nsisHome.length > 0 && !customArguments.includes('-n')) {
+    if (nsisHome.length > 0 && !customArguments.includes('-n')) {
       customArguments.push('-n');
-      customArguments.push(config.nsisHome);
+      customArguments.push(nsisHome);
     }
 
     const compilerArguments = [ ...defaultArguments, ...customArguments, document.fileName ];
@@ -64,15 +61,17 @@ export const transpile = (): void => {
 
     bridleCmd.on('exit', (code) => {
       if (code === 0 && stdErr.length === 0 && hasError === false) {
-        if (config.showNotifications) {
+        if (showNotifications) {
           window.showInformationMessage(`Transpiled successfully -- ${document.fileName}`, 'Open')
           .then(onSuccess);
         }
       } else {
         bridleChannel.show(true);
-        if (config.showNotifications) window.showErrorMessage('Transpile failed, see output for details');
+        if (showNotifications) window.showErrorMessage('Transpile failed, see output for details');
         if (stdErr.length > 0) console.error(stdErr);
       }
     });
   });
-};
+}
+
+export { transpile };
