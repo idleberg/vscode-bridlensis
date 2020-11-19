@@ -1,4 +1,4 @@
-import { window, WorkspaceConfiguration } from 'vscode';
+import { window } from 'vscode';
 
 import { clearOutput, onSuccess, validateConfig } from './util';
 import { getConfig } from 'vscode-get-config';
@@ -44,17 +44,17 @@ async function transpile(): Promise<void> {
     // Let's build
     const bridleCmd = spawn('java', compilerArguments);
 
-    let stdErr: string = '';
-    let hasError: boolean = false;
+    let stdErr = '';
+    let hasError = false;
 
-    bridleCmd.stdout.on('data', (line: Array<any>) => {
+    bridleCmd.stdout.on('data', (line: Array<unknown>) => {
       if (line.includes('Exit Code:')) {
         hasError = true;
       }
       bridleChannel.appendLine(line.toString());
     });
 
-    bridleCmd.stderr.on('data', (line: Array<any>) => {
+    bridleCmd.stderr.on('data', (line: Array<unknown>) => {
       stdErr += '\n' + line;
       bridleChannel.appendLine(line.toString());
     });

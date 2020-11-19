@@ -1,14 +1,13 @@
 import {
   commands,
   window,
-  workspace,
-  WorkspaceConfiguration
+  workspace
 } from 'vscode';
 
 import { basename, dirname, extname, join } from 'path';
 import { getConfig } from 'vscode-get-config';
 
-async function clearOutput(channel): Promise<void> {
+async function clearOutput(channel: unknown): Promise<void> {
   const { alwaysShowOutput } = await getConfig('bridlensis');
 
   channel.clear();
@@ -17,16 +16,16 @@ async function clearOutput(channel): Promise<void> {
   }
 }
 
-function onSuccess(choice): void {
-  let document = window.activeTextEditor.document;
+function onSuccess(choice: string): void {
+  const document = window.activeTextEditor.document;
 
   if (choice === 'Open') {
-    let dirName = dirname(document.fileName);
-    let extName = extname(document.fileName);
-    let baseName = basename(document.fileName, extName);
+    const dirName = dirname(document.fileName);
+    const extName = extname(document.fileName);
+    const baseName = basename(document.fileName, extName);
 
     // because BridleNSIS is kinda buggy
-    let outExt = 'b' + extName.substr(1);
+    const outExt = 'b' + extName.substr(1);
 
     // if BridleNSIS wasn't buggy
     // let outExt;
@@ -36,8 +35,8 @@ function onSuccess(choice): void {
     //   outExt = '.bnsi';
     // }
 
-    let outName = baseName + outExt;
-    let nsisFile = join(dirName, outName);
+    const outName = baseName + outExt;
+    const nsisFile = join(dirName, outName);
 
     workspace.openTextDocument(nsisFile)
     .then( (doc) => {
