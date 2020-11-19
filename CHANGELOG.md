@@ -1,3 +1,8 @@
+# v1.3.0 [#](https://github.com/idleberg/vscode-bridlensis/releases/tag/1.3.0)
+
+- lint with ESLint
+- update dependencies
+
 # v1.2.1 [#](https://github.com/idleberg/vscode-bridlensis/releases/tag/1.2.1)
 
 - fix `getConfig()` call

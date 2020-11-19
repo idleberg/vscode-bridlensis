@@ -7,7 +7,8 @@ import {
 import { basename, dirname, extname, join } from 'path';
 import { getConfig } from 'vscode-get-config';
 
-async function clearOutput(channel: unknown): Promise<void> {
+// eslint-disable-next-line
+async function clearOutput(channel: any): Promise<void> {
   const { alwaysShowOutput } = await getConfig('bridlensis');
 
   channel.clear();
