@@ -1,3 +1,7 @@
+# v1.3.1 [#](https://github.com/idleberg/vscode-bridlensis/releases/tag/1.3.1)
+
+- fix language detection for VSCode v1.54
+
 # v1.3.0 [#](https://github.com/idleberg/vscode-bridlensis/releases/tag/1.3.0)
 
 - lint with ESLint
