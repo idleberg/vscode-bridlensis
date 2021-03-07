@@ -13,7 +13,12 @@ const bridleChannel = window.createOutputChannel('BridleNSIS');
 async function transpile(): Promise<void> {
   await clearOutput(bridleChannel);
 
-  if (window.activeTextEditor['_documentData']['_languageId'] !== 'bridlensis') {
+  // TODO Breaking change in VSCode 1.54, remove in future
+  const languageID = window.activeTextEditor['_documentData']
+    ? window.activeTextEditor['_documentData']['_languageId']
+    : window.activeTextEditor['document']['languageId'];
+
+  if (languageID !== 'bridlensis') {
     bridleChannel.appendLine('This command is only available for BridleNSIS files');
     return;
   }
